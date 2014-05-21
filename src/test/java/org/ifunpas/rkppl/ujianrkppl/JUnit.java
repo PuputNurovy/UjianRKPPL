@@ -41,4 +41,10 @@ public class JUnit extends TestCase {
         assertNotNull("harusnya tidak null", mhs.setNama("puput"));
     }
     
+    public test2(){
+        assertNull(setName(null));
+        assertSame("harusnya sama", 10, mhs.setNrp("113040155"));
+    }
+    
+    
 }
