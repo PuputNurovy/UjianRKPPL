@@ -4,6 +4,8 @@
  */
 package org.ifunpas.rkppl.ujianrkppl;
 
+import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertSame;
 import junit.framework.TestCase;
 
 /**
@@ -38,13 +40,17 @@ public class JUnit extends TestCase {
     
     public test1(){
         assertEquals(4, mhs.setIPK(4));
-        assertNotNull("harusnya tidak null", mhs.setNama("puput"));
+        assertFalse("harusnya salah", mhs.setAktivasi(false));
     }
     
     public test2(){
         assertNull(setName(null));
-        assertSame("harusnya sama", 10, mhs.setNrp("113040155"));
+        assertNotNull("harusnya tidak null", mhs.setNama("puput"));
     }
     
-    
+    public test3(){
+        assertSame("harusnya sama", 10, mhs.setNrp("113040155"));
+        assertNotSame("harusnya tidak sama", "puputs", mhs.setNama("puputs"));
+        
+    }
 }

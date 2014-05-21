@@ -12,7 +12,21 @@ public class Mahasiswa {
     String nrp;
     String nama;
     int IPK;
+    boolean aktivasi;
 
+
+    public Mahasiswa() {
+    }
+
+    
+    public boolean isAktivasi() {
+        return aktivasi;
+    }
+
+    public void setAktivasi(boolean aktivasi) {
+        this.aktivasi = aktivasi;
+    }
+    
     public String getNrp() {
         return nrp;
     }
